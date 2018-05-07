@@ -1,19 +1,29 @@
 {
   "name": "node_api",
   "version": "0.0.1",
-  "description": "PoC ApiRest en Node",
+  "description": "PoC ApiRest",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
+    "run": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vcarulla/NodeApi.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "ImBittor",
+  "license": "(ISC OR GPL-3.0)",
   "bugs": {
     "url": "https://github.com/vcarulla/NodeApi/issues"
   },
-  "homepage": "https://github.com/vcarulla/NodeApi#readme"
+  "homepage": "https://github.com/vcarulla/NodeApi#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.17"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
 }

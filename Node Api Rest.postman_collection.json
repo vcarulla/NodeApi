@@ -1,0 +1,218 @@
+{
+	"info": {
+		"name": "Node Api Rest",
+		"_postman_id": "ea5e8df9-af0a-4a3b-beba-4acdf33f2d20",
+		"description": "PoC APIRest en Node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getItems",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Hp Pavilion DV7",
+							"description": "El nombre del producto.",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "15000",
+							"description": "El precio en pesos del producto.",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://www.fillmurray.com/200/200",
+							"description": "La foto del producto.",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
+							"description": "La descripción del producto.",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "notebook",
+							"description": "La categoria del producto.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						""
+					]
+				},
+				"description": "Devuelve un array con todos los objetos de la colección."
+			},
+			"response": []
+		},
+		{
+			"name": "postItem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Lenovo Thinkpad Carbon X1",
+							"description": "El nombre del producto.",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "15000",
+							"description": "El precio en pesos del producto.",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://www.fillmurray.com/200/200",
+							"description": "La foto del producto.",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "La Lenovo Thinkpad Carbon X1 cuenta con: \nIntel i7\n16GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 14'' Full-HD",
+							"description": "La descripción del producto.",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "notebook",
+							"description": "La categoria del producto.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/product/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						""
+					]
+				},
+				"description": "Envia un nuevo objeto a la colección con los valores pasados en el body de la petición."
+			},
+			"response": []
+		},
+		{
+			"name": "deleteItem",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/api/product/5aefb51acfda1556c9a5edd4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"5aefb51acfda1556c9a5edd4"
+					]
+				},
+				"description": "Elimina el objeto {objectId} que se evia como parametro."
+			},
+			"response": []
+		},
+		{
+			"name": "puttItem",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Hp Pavilion DV7",
+							"description": "El nombre del producto.",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "27000",
+							"description": "El precio en pesos del producto.",
+							"type": "text"
+						},
+						{
+							"key": "picture",
+							"value": "https://www.fillmurray.com/200/300",
+							"description": "La foto del producto.",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
+							"description": "La descripción del producto.",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "notebook",
+							"description": "La categoria del producto.",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/product/5aefc4bc2f63dc62975fbda3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"5aefc4bc2f63dc62975fbda3"
+					]
+				},
+				"description": "Modifica el objeto {objectId} que se evia como parametro con los valores pasados en el body de la petición."
+			},
+			"response": []
+		}
+	]
+}
