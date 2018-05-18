@@ -11,4 +11,4 @@ const ProductSchema = Schema({
     category: { type: String, enum: ['notebook', 'ultrabook', 'desktop'] }
 });
 
-module.exports = mongoose.model('productModel', ProductSchema);
+module.exports = mongoose.model('Product', ProductSchema);

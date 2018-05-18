@@ -1,11 +1,11 @@
 'use strict';
 
-const productModel = require('../models/product');
+const Product = require('../models/product');
 
 function getProducts(req, res) {
     console.log(`GET '/api/product'`);
 
-    productModel.find({}, (err, products) => {
+    Product.find({}, (err, products) => {
         if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición. ERROR: ${err}` });
         if (!products) return res.status(404).send({ message: `No se encontraron coincidencias. ERROR: ${err}` });
 
@@ -18,7 +18,7 @@ function getProduct(req, res) {
 
     let productId = req.params.productId;
 
-    productModel.findById(productId, (err, product) => {
+    Product.findById(productId, (err, product) => {
         if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición. ERROR: ${err}` });
         if (!product) return res.status(404).send({ message: `No se encontraron coincidencias. ERROR: ${err}` });
 
@@ -33,7 +33,7 @@ function updateProduct(req, res) {
     let productId =  req.params.productId;
     let body = req.body;
 
-    productModel.findByIdAndUpdate(productId, body, (err, productUpdated) => {
+    Product.findByIdAndUpdate(productId, body, (err, productUpdated) => {
         if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición. ERROR: ${err}` });
         if (!productUpdated) return res.status(404).send({ message: `No se encontraron coincidencias. ERROR: ${err}` });
 
@@ -46,7 +46,7 @@ function deleteProduct(req, res) {
 
     let productId =  req.params.productId;
 
-    productModel.findById(productId, (err, productDeleted) => {
+    Product.findById(productId, (err, productDeleted) => {
         if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición. ERROR: ${err}` });
         if (!productDeleted) return res.status(404).send({ message: `No se encontraron coincidencias.. ERROR: ${err}` });
 
@@ -60,7 +60,7 @@ function deleteProduct(req, res) {
 function saveProduct(req, res) {
     console.log(`POST '/api/product': \n`, req.body);
 
-    let product = new productModel();
+    const product = new Product();
     product.name = req.body.name;
     product.name = req.body.name;
     product.price = req.body.price;

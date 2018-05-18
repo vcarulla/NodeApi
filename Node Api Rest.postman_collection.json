@@ -7,212 +7,398 @@
 	},
 	"item": [
 		{
-			"name": "getItems",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "name",
-							"value": "Hp Pavilion DV7",
-							"description": "El nombre del producto.",
-							"type": "text"
+			"name": "Items",
+			"description": "",
+			"item": [
+				{
+					"name": "getItems",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Hp Pavilion DV7",
+									"description": "El nombre del producto.",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "15000",
+									"description": "El precio en pesos del producto.",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"value": "https://www.fillmurray.com/200/200",
+									"description": "La foto del producto.",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
+									"description": "La descripción del producto.",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "notebook",
+									"description": "La categoria del producto.",
+									"type": "text"
+								}
+							]
 						},
-						{
-							"key": "price",
-							"value": "15000",
-							"description": "El precio en pesos del producto.",
-							"type": "text"
+						"url": {
+							"raw": "localhost:3000/api/product/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								""
+							]
 						},
-						{
-							"key": "picture",
-							"value": "https://www.fillmurray.com/200/200",
-							"description": "La foto del producto.",
-							"type": "text"
-						},
-						{
-							"key": "description",
-							"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
-							"description": "La descripción del producto.",
-							"type": "text"
-						},
-						{
-							"key": "category",
-							"value": "notebook",
-							"description": "La categoria del producto.",
-							"type": "text"
-						}
-					]
+						"description": "Devuelve un array con todos los objetos de la colección."
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:3000/api/product/",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"product",
-						""
-					]
+				{
+					"name": "postItem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Lenovo Thinkpad Carbon X1",
+									"description": "El nombre del producto.",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "15000",
+									"description": "El precio en pesos del producto.",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"value": "https://www.fillmurray.com/200/200",
+									"description": "La foto del producto.",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "La Lenovo Thinkpad Carbon X1 cuenta con: \nIntel i7\n16GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 14'' Full-HD",
+									"description": "La descripción del producto.",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "notebook",
+									"description": "La categoria del producto.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/product/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						},
+						"description": "Envia un nuevo objeto a la colección con los valores pasados en el body de la petición."
+					},
+					"response": []
 				},
-				"description": "Devuelve un array con todos los objetos de la colección."
-			},
-			"response": []
+				{
+					"name": "deleteItem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/api/product/5aefeec7a3f8b80272dc0b36",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"5aefeec7a3f8b80272dc0b36"
+							]
+						},
+						"description": "Elimina el objeto {objectId} que se evia como parametro."
+					},
+					"response": []
+				},
+				{
+					"name": "puttItem",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Hp Pavilion DV7",
+									"description": "El nombre del producto.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "17000",
+									"description": "El precio en pesos del producto.",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"value": "https://www.fillmurray.com/200/300",
+									"description": "La foto del producto.",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
+									"description": "La descripción del producto.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "notebook",
+									"description": "La categoria del producto.",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/product/5aefee93b8c075023215bb50",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"5aefee93b8c075023215bb50"
+							]
+						},
+						"description": "Modifica el objeto {objectId} que se evia como parametro con los valores pasados en el body de la petición."
+					},
+					"response": []
+				}
+			]
 		},
 		{
-			"name": "postItem",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "name",
-							"value": "Lenovo Thinkpad Carbon X1",
-							"description": "El nombre del producto.",
-							"type": "text"
+			"name": "Authentication",
+			"description": "",
+			"item": [
+				{
+					"name": "privateState",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/api/private",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"private"
+							]
 						},
-						{
-							"key": "price",
-							"value": "15000",
-							"description": "El precio en pesos del producto.",
-							"type": "text"
+						"description": "Verifica el estado del token."
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/api/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"signin"
+							]
 						},
-						{
-							"key": "picture",
-							"value": "https://www.fillmurray.com/200/200",
-							"description": "La foto del producto.",
-							"type": "text"
+						"description": "Logueo de usuario."
+					},
+					"response": []
+				},
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"value": "imbittor2@gmail.com",
+								"description": "El correo electrónico del nuevo usuario."
+							},
+							{
+								"key": "displayName",
+								"value": "ImBittor2",
+								"description": "El nombre de usuario del nuevo usuario."
+							},
+							{
+								"key": "password",
+								"value": "test12345",
+								"description": "La contraseña del nuevo usuario."
+							},
+							{
+								"key": "avatar",
+								"value": "",
+								"description": "El avatar proporcionado por Gravatar del  nuevo usuario."
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "localhost:3000/api/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"signup"
+							]
 						},
+						"description": "Creación de usuario."
+					},
+					"response": [
 						{
-							"key": "description",
-							"value": "La Lenovo Thinkpad Carbon X1 cuenta con: \nIntel i7\n16GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 14'' Full-HD",
-							"description": "La descripción del producto.",
-							"type": "text"
-						},
-						{
-							"key": "category",
-							"value": "notebook",
-							"description": "La categoria del producto.",
-							"type": "text"
+							"id": "7ed37105-5c7a-49f7-b073-d264b187bfba",
+							"name": "signUp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "email",
+										"value": "imbittor2@gmail.com",
+										"description": "El correo electrónico del nuevo usuario."
+									},
+									{
+										"key": "displayName",
+										"value": "ImBittor2",
+										"description": "El nombre de usuario del nuevo usuario."
+									},
+									{
+										"key": "password",
+										"value": "test123456",
+										"description": "La contraseña del nuevo usuario."
+									},
+									{
+										"key": "avatar",
+										"value": ""
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "localhost:3000/api/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"signup"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1989",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self'",
+									"name": "Content-Security-Policy",
+									"description": "Custom header"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 May 2018 04:54:14 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"name": "X-Content-Type-Options",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>ReferenceError: user is not defined<br> &nbsp; &nbsp;at signUp (/home/victor/Documentos/NodeApi/controllers/user.js:11:17)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at next (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/route.js:137:13)<br> &nbsp; &nbsp;at Route.dispatch (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/route.js:112:3)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at /home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:281:22<br> &nbsp; &nbsp;at Function.process_params (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:335:12)<br> &nbsp; &nbsp;at next (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:275:10)<br> &nbsp; &nbsp;at Function.handle (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:174:3)<br> &nbsp; &nbsp;at router (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:47:12)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at trim_prefix (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:317:13)<br> &nbsp; &nbsp;at /home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:284:7<br> &nbsp; &nbsp;at Function.process_params (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:335:12)<br> &nbsp; &nbsp;at next (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:275:10)<br> &nbsp; &nbsp;at jsonParser (/home/victor/Documentos/NodeApi/node_modules/body-parser/lib/types/json.js:118:7)</pre>\n</body>\n</html>\n"
 						}
 					]
-				},
-				"url": {
-					"raw": "localhost:3000/api/product/",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"product",
-						""
-					]
-				},
-				"description": "Envia un nuevo objeto a la colección con los valores pasados en el body de la petición."
-			},
-			"response": []
-		},
-		{
-			"name": "deleteItem",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "localhost:3000/api/product/5aefb51acfda1556c9a5edd4",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"product",
-						"5aefb51acfda1556c9a5edd4"
-					]
-				},
-				"description": "Elimina el objeto {objectId} que se evia como parametro."
-			},
-			"response": []
-		},
-		{
-			"name": "puttItem",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "name",
-							"value": "Hp Pavilion DV7",
-							"description": "El nombre del producto.",
-							"type": "text",
-							"disabled": true
-						},
-						{
-							"key": "price",
-							"value": "27000",
-							"description": "El precio en pesos del producto.",
-							"type": "text"
-						},
-						{
-							"key": "picture",
-							"value": "https://www.fillmurray.com/200/300",
-							"description": "La foto del producto.",
-							"type": "text"
-						},
-						{
-							"key": "description",
-							"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
-							"description": "La descripción del producto.",
-							"type": "text",
-							"disabled": true
-						},
-						{
-							"key": "category",
-							"value": "notebook",
-							"description": "La categoria del producto.",
-							"type": "text",
-							"disabled": true
-						}
-					]
-				},
-				"url": {
-					"raw": "localhost:3000/api/product/5aefc4bc2f63dc62975fbda3",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"product",
-						"5aefc4bc2f63dc62975fbda3"
-					]
-				},
-				"description": "Modifica el objeto {objectId} que se evia como parametro con los valores pasados en el body de la petición."
-			},
-			"response": []
+				}
+			]
 		}
 	]
 }
