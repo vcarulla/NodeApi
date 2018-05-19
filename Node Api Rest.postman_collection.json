@@ -79,6 +79,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1YWZmOTE1ZjU5Y2Y1MjJhZGEwYzZkOGEiLCJpYXQiOjE1MjY3NjE2NjYsImV4cCI6MTUyNzk3MTI2Nn0.hyTX-V7J_YFRb6q6BYWT_OxEc4oKMt2wUEEDZIaXaGCS3wnWanWiPzLCrfotrA5j_6wvXeZf1EPz-cz63XwO-A",
+								"description": "El token de respuesta de la autenticación."
 							}
 						],
 						"body": {
@@ -228,7 +233,13 @@
 					"name": "privateState",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1YWZmOTE1ZjU5Y2Y1MjJhZGEwYzZkOGEiLCJpYXQiOjE1MjY3NjE2NjYsImV4cCI6MTUyNzk3MTI2Nn0.hyTX-V7J_YFRb6q6BYWT_OxEc4oKMt2wUEEDZIaXaGCS3wnWanWiPzLCrfotrA5j_6wvXeZf1EPz-cz63XwO-A",
+								"description": "El token de respuesta de la autenticación."
+							}
+						],
 						"body": {},
 						"url": {
 							"raw": "localhost:3000/api/private",
@@ -249,8 +260,29 @@
 					"name": "signIn",
 					"request": {
 						"method": "POST",
-						"header": [],
-						"body": {},
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "imbittor@gmail.com",
+									"type": "text",
+									"description": "El correo electrónico del usuario."
+								},
+								{
+									"key": "password",
+									"value": "test12345",
+									"type": "text",
+									"description": "La contraseña del usuario."
+								}
+							]
+						},
 						"url": {
 							"raw": "localhost:3000/api/signin",
 							"host": [
@@ -272,27 +304,39 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "email",
-								"value": "imbittor2@gmail.com",
-								"description": "El correo electrónico del nuevo usuario."
-							},
-							{
-								"key": "displayName",
-								"value": "ImBittor2",
-								"description": "El nombre de usuario del nuevo usuario."
-							},
-							{
-								"key": "password",
-								"value": "test12345",
-								"description": "La contraseña del nuevo usuario."
-							},
-							{
-								"key": "avatar",
-								"value": "",
-								"description": "El avatar proporcionado por Gravatar del  nuevo usuario."
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "imbittor@gmail.com",
+									"type": "text",
+									"description": "El correo electrónico del nuevo usuario."
+								},
+								{
+									"key": "displayName",
+									"value": "ImBittor",
+									"type": "text",
+									"description": "El nombre de usuario del nuevo usuario."
+								},
+								{
+									"key": "password",
+									"value": "test12345",
+									"type": "text",
+									"description": "La contraseña del nuevo usuario."
+								},
+								{
+									"key": "avatar",
+									"value": "",
+									"type": "text",
+									"description": "El avatar proporcionado por Gravatar del  nuevo usuario."
+								}
+							]
+						},
 						"url": {
 							"raw": "localhost:3000/api/signup",
 							"host": [
@@ -308,7 +352,7 @@
 					},
 					"response": [
 						{
-							"id": "7ed37105-5c7a-49f7-b073-d264b187bfba",
+							"id": "a2e9edc3-ef71-4f9f-9b54-70516597e04f",
 							"name": "signUp",
 							"originalRequest": {
 								"method": "POST",
@@ -399,6 +443,28 @@
 					]
 				}
 			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "dd23851b-ee8c-4368-9f65-865930b914db",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "577df74f-de96-410d-9ac2-e753577dd871",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
