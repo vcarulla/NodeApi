@@ -7,299 +7,23 @@
 	},
 	"item": [
 		{
-			"name": "Items",
-			"description": "",
-			"item": [
-				{
-					"name": "getItems",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded"
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "name",
-									"value": "Hp Pavilion DV7",
-									"description": "El nombre del producto.",
-									"type": "text"
-								},
-								{
-									"key": "price",
-									"value": "15000",
-									"description": "El precio en pesos del producto.",
-									"type": "text"
-								},
-								{
-									"key": "picture",
-									"value": "https://www.fillmurray.com/200/200",
-									"description": "La foto del producto.",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
-									"description": "La descripción del producto.",
-									"type": "text"
-								},
-								{
-									"key": "category",
-									"value": "notebook",
-									"description": "La categoria del producto.",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:3000/api/product/",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"product",
-								""
-							]
-						},
-						"description": "Devuelve un array con todos los objetos de la colección."
-					},
-					"response": []
-				},
-				{
-					"name": "postItem",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded"
-							},
-							{
-								"key": "authorization",
-								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1YWZmOTE1ZjU5Y2Y1MjJhZGEwYzZkOGEiLCJpYXQiOjE1MjY3NjE2NjYsImV4cCI6MTUyNzk3MTI2Nn0.hyTX-V7J_YFRb6q6BYWT_OxEc4oKMt2wUEEDZIaXaGCS3wnWanWiPzLCrfotrA5j_6wvXeZf1EPz-cz63XwO-A",
-								"description": "El token de respuesta de la autenticación."
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "name",
-									"value": "Lenovo Thinkpad Carbon X1",
-									"description": "El nombre del producto.",
-									"type": "text"
-								},
-								{
-									"key": "price",
-									"value": "15000",
-									"description": "El precio en pesos del producto.",
-									"type": "text"
-								},
-								{
-									"key": "picture",
-									"value": "https://www.fillmurray.com/200/200",
-									"description": "La foto del producto.",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "La Lenovo Thinkpad Carbon X1 cuenta con: \nIntel i7\n16GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 14'' Full-HD",
-									"description": "La descripción del producto.",
-									"type": "text"
-								},
-								{
-									"key": "category",
-									"value": "notebook",
-									"description": "La categoria del producto.",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:3000/api/product/",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"product",
-								""
-							]
-						},
-						"description": "Envia un nuevo objeto a la colección con los valores pasados en el body de la petición."
-					},
-					"response": []
-				},
-				{
-					"name": "deleteItem",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {},
-						"url": {
-							"raw": "localhost:3000/api/product/5aefeec7a3f8b80272dc0b36",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"product",
-								"5aefeec7a3f8b80272dc0b36"
-							]
-						},
-						"description": "Elimina el objeto {objectId} que se evia como parametro."
-					},
-					"response": []
-				},
-				{
-					"name": "puttItem",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded"
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "name",
-									"value": "Hp Pavilion DV7",
-									"description": "El nombre del producto.",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "price",
-									"value": "17000",
-									"description": "El precio en pesos del producto.",
-									"type": "text"
-								},
-								{
-									"key": "picture",
-									"value": "https://www.fillmurray.com/200/300",
-									"description": "La foto del producto.",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
-									"description": "La descripción del producto.",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "category",
-									"value": "notebook",
-									"description": "La categoria del producto.",
-									"type": "text",
-									"disabled": true
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:3000/api/product/5aefee93b8c075023215bb50",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"product",
-								"5aefee93b8c075023215bb50"
-							]
-						},
-						"description": "Modifica el objeto {objectId} que se evia como parametro con los valores pasados en el body de la petición."
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "Authentication",
-			"description": "",
+			"description": "Los Authentications Services",
 			"item": [
-				{
-					"name": "privateState",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "authorization",
-								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1YWZmOTE1ZjU5Y2Y1MjJhZGEwYzZkOGEiLCJpYXQiOjE1MjY3NjE2NjYsImV4cCI6MTUyNzk3MTI2Nn0.hyTX-V7J_YFRb6q6BYWT_OxEc4oKMt2wUEEDZIaXaGCS3wnWanWiPzLCrfotrA5j_6wvXeZf1EPz-cz63XwO-A",
-								"description": "El token de respuesta de la autenticación."
-							}
-						],
-						"body": {},
-						"url": {
-							"raw": "localhost:3000/api/private",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"private"
-							]
-						},
-						"description": "Verifica el estado del token."
-					},
-					"response": []
-				},
-				{
-					"name": "signIn",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded"
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "email",
-									"value": "imbittor@gmail.com",
-									"type": "text",
-									"description": "El correo electrónico del usuario."
-								},
-								{
-									"key": "password",
-									"value": "test12345",
-									"type": "text",
-									"description": "La contraseña del usuario."
-								}
-							]
-						},
-						"url": {
-							"raw": "localhost:3000/api/signin",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"signin"
-							]
-						},
-						"description": "Logueo de usuario."
-					},
-					"response": []
-				},
 				{
 					"name": "signUp",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "4d0790c6-f695-4e8e-a134-52d60078b1e3",
+								"type": "text/javascript",
+								"exec": [
+									"email = 'imbittor6';"
+								]
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [
@@ -313,13 +37,13 @@
 							"urlencoded": [
 								{
 									"key": "email",
-									"value": "imbittor@gmail.com",
+									"value": "imbitt2or@gmail.com",
 									"type": "text",
 									"description": "El correo electrónico del nuevo usuario."
 								},
 								{
 									"key": "displayName",
-									"value": "ImBittor",
+									"value": "imBittor",
 									"type": "text",
 									"description": "El nombre de usuario del nuevo usuario."
 								},
@@ -338,11 +62,10 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:3000/api/signup",
+							"raw": "{{serverIP}}/api/signup",
 							"host": [
-								"localhost"
+								"{{serverIP}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"signup"
@@ -352,47 +75,59 @@
 					},
 					"response": [
 						{
-							"id": "a2e9edc3-ef71-4f9f-9b54-70516597e04f",
-							"name": "signUp",
+							"id": "57ec41b9-31cc-4cc4-81ae-2f42a95e173b",
+							"name": "signUp 200OK",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
 									{
-										"key": "email",
-										"value": "imbittor2@gmail.com",
-										"description": "El correo electrónico del nuevo usuario."
-									},
-									{
-										"key": "displayName",
-										"value": "ImBittor2",
-										"description": "El nombre de usuario del nuevo usuario."
-									},
-									{
-										"key": "password",
-										"value": "test123456",
-										"description": "La contraseña del nuevo usuario."
-									},
-									{
-										"key": "avatar",
-										"value": ""
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
 									}
 								],
-								"body": {},
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "ImBittor@mymail.com",
+											"type": "text",
+											"description": "El correo electrónico del nuevo usuario."
+										},
+										{
+											"key": "displayName",
+											"value": "ImBittor",
+											"type": "text",
+											"description": "El nombre de usuario del nuevo usuario."
+										},
+										{
+											"key": "password",
+											"value": "misuperpass12345",
+											"type": "text",
+											"description": "La contraseña del nuevo usuario."
+										},
+										{
+											"key": "avatar",
+											"value": "",
+											"type": "text",
+											"description": "El avatar proporcionado por Gravatar del  nuevo usuario."
+										}
+									]
+								},
 								"url": {
-									"raw": "localhost:3000/api/signup",
+									"raw": "{{serverIP}}/api/signup",
 									"host": [
-										"localhost"
+										"{{serverIP}}"
 									],
-									"port": "3000",
 									"path": [
 										"api",
 										"signup"
 									]
 								}
 							},
-							"status": "Internal Server Error",
-							"code": 500,
-							"_postman_previewlanguage": "html",
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "Connection",
@@ -402,33 +137,27 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "1989",
+									"value": "227",
 									"name": "Content-Length",
 									"description": "The length of the response body in octets (8-bit bytes)"
 								},
 								{
-									"key": "Content-Security-Policy",
-									"value": "default-src 'self'",
-									"name": "Content-Security-Policy",
-									"description": "Custom header"
-								},
-								{
 									"key": "Content-Type",
-									"value": "text/html; charset=utf-8",
+									"value": "application/json; charset=utf-8",
 									"name": "Content-Type",
 									"description": "The mime type of this content"
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 18 May 2018 04:54:14 GMT",
+									"value": "Sun, 20 May 2018 01:56:02 GMT",
 									"name": "Date",
 									"description": "The date and time that the message was sent"
 								},
 								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff",
-									"name": "X-Content-Type-Options",
-									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+									"key": "ETag",
+									"value": "W/\"e3-KfX5Wlw7NslZiKy425Dsx8+E0fk\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
 								},
 								{
 									"key": "X-Powered-By",
@@ -438,9 +167,1506 @@
 								}
 							],
 							"cookie": [],
-							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>ReferenceError: user is not defined<br> &nbsp; &nbsp;at signUp (/home/victor/Documentos/NodeApi/controllers/user.js:11:17)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at next (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/route.js:137:13)<br> &nbsp; &nbsp;at Route.dispatch (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/route.js:112:3)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at /home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:281:22<br> &nbsp; &nbsp;at Function.process_params (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:335:12)<br> &nbsp; &nbsp;at next (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:275:10)<br> &nbsp; &nbsp;at Function.handle (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:174:3)<br> &nbsp; &nbsp;at router (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:47:12)<br> &nbsp; &nbsp;at Layer.handle [as handle_request] (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/layer.js:95:5)<br> &nbsp; &nbsp;at trim_prefix (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:317:13)<br> &nbsp; &nbsp;at /home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:284:7<br> &nbsp; &nbsp;at Function.process_params (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:335:12)<br> &nbsp; &nbsp;at next (/home/victor/Documentos/NodeApi/node_modules/express/lib/router/index.js:275:10)<br> &nbsp; &nbsp;at jsonParser (/home/victor/Documentos/NodeApi/node_modules/body-parser/lib/types/json.js:118:7)</pre>\n</body>\n</html>\n"
+							"body": "{\n\t\"message\" : \"Usuario generado con éxito!\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOikjbJHjk89.eyJzdWIiOiI1YjAwZDViMTAyYTg0NjEwNWQ4NjcyODMiLCJpYXQiOjE1MjY3ODEzNjIsImV4cCI6MTUyNzk5MDk2Mn0.H-Jh_JkM1P88jkDpPQUTASfTwaqozAisoaHVXYtsGtVoNRsfjUf8pTbyfJWw3QokjL2xlbxQWi-MEjG0W7OvBw\"\n}"
 						}
 					]
+				},
+				{
+					"name": "signIn",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "3ee0aaaa-bb51-41b7-9322-57f6aa043869",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "419c2299-6d8e-4dff-9e18-e8a925093779",
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", jsonData.token);"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "imbitt2or@gmail.com",
+									"type": "text",
+									"description": "El correo electrónico del usuario."
+								},
+								{
+									"key": "password",
+									"value": "test12345",
+									"type": "text",
+									"description": "La contraseña del usuario."
+								}
+							]
+						},
+						"url": {
+							"raw": "{{serverIP}}/api/signin",
+							"host": [
+								"{{serverIP}}"
+							],
+							"path": [
+								"api",
+								"signin"
+							]
+						},
+						"description": "Ingreso de usuario."
+					},
+					"response": [
+						{
+							"id": "27b3380e-f8a3-42f2-91b6-6cf4197c6903",
+							"name": "signIn 401 Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "imbittor@myMail.com",
+											"type": "text",
+											"description": "El correo electrónico del usuario."
+										},
+										{
+											"key": "password",
+											"value": "badpasspword",
+											"type": "text",
+											"description": "La contraseña del usuario."
+										}
+									]
+								},
+								"url": {
+									"raw": "{{serverIP}}/api/signin",
+									"host": [
+										"{{serverIP}}"
+									],
+									"path": [
+										"api",
+										"signin"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 May 2018 02:39:46 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-BYWNvWKnL9RpDAj/L7O5k8vUHMc\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Datos Incorrectos.\",\"ERROR\":\"null\"}"
+						},
+						{
+							"id": "d900819c-c26d-415d-8628-3e5b40c18905",
+							"name": "signIn 200OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "imbittor@myMail.com",
+											"type": "text",
+											"description": "El correo electrónico del usuario."
+										},
+										{
+											"key": "password",
+											"value": "test12345",
+											"type": "text",
+											"description": "La contraseña del usuario."
+										}
+									]
+								},
+								"url": {
+									"raw": "{{serverIP}}/api/signin",
+									"host": [
+										"{{serverIP}}"
+									],
+									"path": [
+										"api",
+										"signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "260",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 May 2018 02:40:57 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"104-icKb6x3+6QJw3nasBooF5ZYPNzQ\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Bienvenido ImBittor!\",\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1YWZmOTE1ZjU5Y2Y1MjJhZGEwYzZkOGEiLCJpYXQiOjE1MjY3ODQwNTcsImV4cCI6MTUyNzk5MzY1N30.1HyA7Yvrm7ZC9NQ0VzcgmFvkskYIcr_OVmjeNPxQK9Yyy2xsqZASlDjV5FvKgcgSa-t4Q7he1vlnvDeNh1CGXw\"}"
+						}
+					]
+				},
+				{
+					"name": "privateState",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"description": "El token de respuesta de la autenticación."
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{serverIP}}/api/private",
+							"host": [
+								"{{serverIP}}"
+							],
+							"path": [
+								"api",
+								"private"
+							]
+						},
+						"description": "Verifica el estado del token (y accseso a la API)."
+					},
+					"response": [
+						{
+							"id": "fffb1fd5-0186-43e9-a432-c72cc5693e32",
+							"name": "privateState",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "authorization",
+										"value": "{{token}}",
+										"description": "El token de respuesta de la autenticación."
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{serverIP}}/api/private",
+									"host": [
+										"{{serverIP}}"
+									],
+									"path": [
+										"api",
+										"private"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 May 2018 22:19:11 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-qYdSC0nZ5L7KhL9C2Orhoxe3f34\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Acceso concedido\"}"
+						},
+						{
+							"id": "7e8b47cd-0248-4a2c-89eb-fa4d39d76b84",
+							"name": "privateState 403 Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "authorization",
+										"value": "{{token}}",
+										"description": "El token de respuesta de la autenticación.",
+										"disabled": true
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{serverIP}}/api/private",
+									"host": [
+										"{{serverIP}}"
+									],
+									"path": [
+										"api",
+										"private"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 May 2018 02:45:54 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-iEsRLYqigtqU8U8j2w5vcyH5Am4\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"No se encuentra autorizado para acceder\"}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d6839784-af49-42ef-8d80-55047bf4cc71",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6fcfbb71-6ef8-4232-8a67-3dbfd252e8f3",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Items",
+			"description": "Los RESTful Services",
+			"item": [
+				{
+					"name": "getItems",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "886c24f8-b55e-4798-b03d-fc22d6727029",
+								"type": "text/javascript",
+								"exec": [
+									"var objectsId = [];",
+									"var jsonData = JSON.parse(responseBody);",
+									"for(var i = 0; i < jsonData.products.length; i++) {",
+									"    var obj = jsonData.products[i]._id;",
+									"    objectsId.push(obj);",
+									"}",
+									"if (objectsId.length > 1 ) { ",
+									"    postman.setEnvironmentVariable(\"objectId\", objectsId[objectsId.length-1]);  ",
+									"} else {",
+									"    //TODO Ver como llamar a putItem antes de ejecutar esta task ej: postman.setNextRequest('putItem');",
+									"    console.log(\"Crea un elemento\");",
+									"    postman.setEnvironmentVariable(\"objectId\", objectsId[objectsId.length-1]);",
+									"}",
+									"console.log(\"objectId\", objectsId);"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "498934b9-f690-4e35-a835-e5a78d9dd1be",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Hp Pavilion DV7",
+									"description": "El nombre del producto.",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "15000",
+									"description": "El precio en pesos del producto.",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"value": "https://www.fillmurray.com/200/200",
+									"description": "La foto del producto.",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
+									"description": "La descripción del producto.",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "notebook",
+									"description": "La categoria del producto.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{serverIP}}/api/product/",
+							"host": [
+								"{{serverIP}}"
+							],
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						},
+						"description": "Devuelve un array con todos los objetos de la colección."
+					},
+					"response": [
+						{
+							"id": "e9938c56-60fa-4ca5-a7dc-40913acbb436",
+							"name": "getItems",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Hp Pavilion DV7",
+											"description": "El nombre del producto.",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "15000",
+											"description": "El precio en pesos del producto.",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"value": "https://www.fillmurray.com/200/200",
+											"description": "La foto del producto.",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
+											"description": "La descripción del producto.",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "notebook",
+											"description": "La categoria del producto.",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{serverIP}}/api/product/",
+									"host": [
+										"{{serverIP}}"
+									],
+									"path": [
+										"api",
+										"product",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "604",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 May 2018 02:29:08 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25c-6xNDFV/N9EKhYjkIBXNEGDj77y0\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"products\": [\n        {\n            \"price\": 15000,\n            \"_id\": \"5b00dd1fe83fd93192b44ce4\",\n            \"name\": \"Lenovo Thinkpad Carbon X1\",\n            \"picture\": \"https://www.fillmurray.com/200/200\",\n            \"description\": \"La Lenovo Thinkpad Carbon X1 cuenta con: \\nIntel i7\\n16GB de RAM DDR4,\\nDisco de 720GB 7200RPM,\\nDisplay 14'' Full-HD\",\n            \"category\": \"notebook\",\n            \"__v\": 0\n        },\n        {\n            \"price\": 15000,\n            \"_id\": \"5b00dd70e83fd93192b44ce5\",\n            \"name\": \"Appleshit pro\",\n            \"picture\": \"https://www.fillmurray.com/200/200\",\n            \"description\": \"La Appleshit PRO cuenta con: \\nIntel i7\\n16GB de RAM DDR4,\\nDisco de 720GB 7200RPM,\\nDisplay 14'' Full-HD\",\n            \"category\": \"notebook\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "getItem",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8532b2d9-99ef-4150-a188-d95eb0b6112b",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d1ad2fb4-ac80-44e6-9894-66a827e32dda",
+								"type": "text/javascript",
+								"exec": [
+									"const objectId = postman.getEnvironmentVariable('objectsId');",
+									"if (objectId === undefined ) { ",
+									"    //TODO Ver como llamar a getItem antes de ejecutar esta task ej: postman.setNextRequest('getItems');",
+									"    console.info(\"Crea un elemento primero\");",
+									"} else { ",
+									"    console.log(objectId);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "authorization",
+								"value": "{{Token}}",
+								"description": "El token de respuesta de la autenticación."
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Hp Pavilion DV7",
+									"description": "El nombre del producto.",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "15000",
+									"description": "El precio en pesos del producto.",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"value": "https://www.fillmurray.com/200/200",
+									"description": "La foto del producto.",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
+									"description": "La descripción del producto.",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "notebook",
+									"description": "La categoria del producto.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{serverIP}}/api/product/{{objectId}}",
+							"host": [
+								"{{serverIP}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"{{objectId}}"
+							]
+						},
+						"description": "Devuelve el objeto {objectId} que se evia como parametro."
+					},
+					"response": [
+						{
+							"id": "120316ff-e322-40ba-be37-545d84981eb9",
+							"name": "getItem 500 Internal Server Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "authorization",
+										"value": "{{Token}}",
+										"description": "El token de respuesta de la autenticación."
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Hp Pavilion DV7",
+											"description": "El nombre del producto.",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "15000",
+											"description": "El precio en pesos del producto.",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"value": "https://www.fillmurray.com/200/200",
+											"description": "La foto del producto.",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
+											"description": "La descripción del producto.",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "notebook",
+											"description": "La categoria del producto.",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{serverIP}}/api/product/{{objectId}}",
+									"host": [
+										"{{serverIP}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"{{objectId}}"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 May 2018 02:35:04 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-ayarF7vxTNfMqDXM6rJCYhnHZ08\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Se produjo un error al realizar la petición.\",\"ERROR\":\"CastError: Cast to ObjectId failed for value \\\"5456456456564\\\" at path \\\"_id\\\" for model \\\"Product\\\"\"}"
+						},
+						{
+							"id": "1899c57e-763f-4024-ae9b-cd587aace35b",
+							"name": "getItem 200OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									},
+									{
+										"key": "authorization",
+										"value": "{{Token}}",
+										"description": "El token de respuesta de la autenticación.",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Hp Pavilion DV7",
+											"description": "El nombre del producto.",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "15000",
+											"description": "El precio en pesos del producto.",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"value": "https://www.fillmurray.com/200/200",
+											"description": "La foto del producto.",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
+											"description": "La descripción del producto.",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "notebook",
+											"description": "La categoria del producto.",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{serverIP}}/api/product/{{objectId}}",
+									"host": [
+										"{{serverIP}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"{{objectId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "306",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 May 2018 02:33:46 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"132-TZy2NorWfpNDRly8Mcr3UtZRxlY\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"product\":{\"price\":15000,\"_id\":\"5b00dd70e83fd93192b44ce5\",\"name\":\"Lenovo Thinkpad Carbon X1\",\"picture\":\"https://www.fillmurray.com/200/200\",\"description\":\"La Lenovo Thinkpad Carbon X1 cuenta con: \\nIntel i7\\n16GB de RAM DDR4,\\nDisco de 720GB 7200RPM,\\nDisplay 14'' Full-HD\",\"category\":\"notebook\",\"__v\":0}}"
+						}
+					]
+				},
+				{
+					"name": "postItem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"description": "El token de respuesta de la autenticación."
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Content-Type",
+									"value": "application/x-www-form-urlencoded",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "Lenovo Thinkpad Carbon X1",
+									"type": "text",
+									"description": "El nombre del producto."
+								},
+								{
+									"key": "price",
+									"value": "15000",
+									"type": "text",
+									"description": "El precio en pesos del producto."
+								},
+								{
+									"key": "picture",
+									"value": "https://www.fillmurray.com/200/200",
+									"type": "text",
+									"description": "La foto del producto."
+								},
+								{
+									"key": "description",
+									"value": "La Lenovo Thinkpad Carbon X1 cuenta con: \nIntel i7\n16GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 14'' Full-HD",
+									"type": "text",
+									"description": "La descripción del producto."
+								},
+								{
+									"key": "category",
+									"value": "notebook",
+									"type": "text",
+									"description": "La categoria del producto."
+								}
+							]
+						},
+						"url": {
+							"raw": "{{serverIP}}/api/product/",
+							"host": [
+								"{{serverIP}}"
+							],
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						},
+						"description": "Envia un nuevo objeto a la colección con los valores pasados en el body de la petición."
+					},
+					"response": [
+						{
+							"id": "1484ba62-99eb-4f5c-b085-35717424acc9",
+							"name": "postItem",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "authorization",
+										"value": "{{token}}",
+										"description": "El token de respuesta de la autenticación."
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Content-Type",
+											"value": "application/x-www-form-urlencoded",
+											"type": "text",
+											"description": ""
+										},
+										{
+											"key": "name",
+											"value": "Lenovo Thinkpad Carbon X1",
+											"type": "text",
+											"description": "El nombre del producto."
+										},
+										{
+											"key": "price",
+											"value": "15000",
+											"type": "text",
+											"description": "El precio en pesos del producto."
+										},
+										{
+											"key": "picture",
+											"value": "https://www.fillmurray.com/200/200",
+											"type": "text",
+											"description": "La foto del producto."
+										},
+										{
+											"key": "description",
+											"value": "La Lenovo Thinkpad Carbon X1 cuenta con: \nIntel i7\n16GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 14'' Full-HD",
+											"type": "text",
+											"description": "La descripción del producto."
+										},
+										{
+											"key": "category",
+											"value": "notebook",
+											"type": "text",
+											"description": "La categoria del producto."
+										}
+									]
+								},
+								"url": {
+									"raw": "{{serverIP}}/api/product/",
+									"host": [
+										"{{serverIP}}"
+									],
+									"path": [
+										"api",
+										"product",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "306",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 May 2018 01:40:01 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"132-ZqJnToxoayhV8i3NemrfSk8sokw\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"product\":{\"price\":15000,\"_id\":\"5b00d1f102a846105d867281\",\"name\":\"Lenovo Thinkpad Carbon X1\",\"picture\":\"https://www.fillmurray.com/200/200\",\"description\":\"La Lenovo Thinkpad Carbon X1 cuenta con: \\nIntel i7\\n16GB de RAM DDR4,\\nDisco de 720GB 7200RPM,\\nDisplay 14'' Full-HD\",\"category\":\"notebook\",\"__v\":0}}"
+						}
+					]
+				},
+				{
+					"name": "puttItem",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "7ffcac1b-12db-4e80-9b68-52fb67ac47db",
+								"type": "text/javascript",
+								"exec": [
+									"const objectId = postman.getEnvironmentVariable('objectId');",
+									"if (objectId === undefined ) { ",
+									"    //TODO Ver como llamar a getItem antes de ejecutar esta task ej: postman.setNextRequest('getItems');",
+									"    console.info(\"Crea un elemento primero\");",
+									"} else { ",
+									"    console.log(objectId);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"description": "El token de respuesta de la autenticación."
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Content-Type",
+									"value": "application/x-www-form-urlencoded",
+									"type": "text",
+									"description": "El nombre del producto."
+								},
+								{
+									"key": "name",
+									"value": "Hp Pavilion DV7",
+									"type": "text",
+									"description": "El nombre  del producto.",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "17000",
+									"type": "text",
+									"description": "El precio  del producto."
+								},
+								{
+									"key": "picture",
+									"value": "https://www.fillmurray.com/200/300",
+									"type": "text",
+									"description": "La foto del producto."
+								},
+								{
+									"key": "description",
+									"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
+									"type": "text",
+									"description": "La descripción del producto.",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "notebook",
+									"type": "text",
+									"description": "La categoria del producto.",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{serverIP}}/api/product/{{objectId}}",
+							"host": [
+								"{{serverIP}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"{{objectId}}"
+							]
+						},
+						"description": "Modifica el objeto {objectId} que se evia como parametro con los valores pasados en el body de la petición."
+					},
+					"response": [
+						{
+							"id": "151fe9b6-14d9-42ae-bb70-229d2a43f1cf",
+							"name": "puttItem",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									},
+									{
+										"key": "authorization",
+										"value": "{{token}}",
+										"description": "El token de respuesta de la autenticación.",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Content-Type",
+											"value": "application/x-www-form-urlencoded",
+											"type": "text",
+											"description": "El nombre del producto."
+										},
+										{
+											"key": "name",
+											"value": "Hp Pavilion DV7",
+											"type": "text",
+											"description": "El nombre  del producto.",
+											"disabled": true
+										},
+										{
+											"key": "price",
+											"value": "17000",
+											"type": "text",
+											"description": "El precio  del producto."
+										},
+										{
+											"key": "picture",
+											"value": "https://www.fillmurray.com/200/300",
+											"type": "text",
+											"description": "La foto del producto."
+										},
+										{
+											"key": "description",
+											"value": "La Hp Pavilion DV7 cuenta con: \nIntel i5 M2085\n8GB de RAM DDR4,\nDisco de 720GB 7200RPM,\nDisplay 17'' Full-HD",
+											"type": "text",
+											"description": "La descripción del producto.",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "notebook",
+											"type": "text",
+											"description": "La categoria del producto.",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{serverIP}}/api/product/{{objectId}}",
+									"host": [
+										"{{serverIP}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"{{objectId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "385",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 May 2018 02:24:51 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"181-iy3ArTp8/akOOfwREjg/i94OwLU\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"El producto fue actualizado con éxito.\",\"product\":\"{ price: 17000,\\n  _id: 5b00d6fa02a846105d867285,\\n  name: 'Lenovo Thinkpad Carbon X1',\\n  picture: 'https://www.fillmurray.com/200/300',\\n  description: 'La Lenovo Thinkpad Carbon X1 cuenta con: \\\\nIntel i7\\\\n16GB de RAM DDR4,\\\\nDisco de 720GB 7200RPM,\\\\nDisplay 14\\\\'\\\\' Full-HD',\\n  category: 'notebook',\\n  __v: 0 }\"}"
+						}
+					]
+				},
+				{
+					"name": "deleteItem",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "cc0c76a6-a0af-4d27-9200-3e0f486fad58",
+								"type": "text/javascript",
+								"exec": [
+									"const objectId = postman.getEnvironmentVariable('objectsId');",
+									"if (objectId === undefined ) { ",
+									"    //TODO Ver como llamar a getItem antes de ejecutar esta task ej: postman.setNextRequest('getItems');",
+									"    console.info(\"Crea un elemento primero\");",
+									"} else { ",
+									"    console.log(objectId);",
+									"}"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "198cd1a0-dc14-460c-adc3-8ff578a0b6f3",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "authorization",
+								"value": "{{token}}",
+								"description": "El token de respuesta de la autenticación."
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{serverIP}}/api/product/{{objectId}}",
+							"host": [
+								"{{serverIP}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"{{objectId}}"
+							]
+						},
+						"description": "Elimina el objeto {objectId} que se evia como parametro."
+					},
+					"response": [
+						{
+							"id": "b6fb44d3-4a28-4cd1-9e22-bd9b97aa709b",
+							"name": "deleteItem",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									},
+									{
+										"key": "authorization",
+										"value": "{{token}}",
+										"description": "El token de respuesta de la autenticación.",
+										"disabled": false
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{serverIP}}/api/product/{{objectId}}",
+									"host": [
+										"{{serverIP}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"{{objectId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "88",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 20 May 2018 02:26:03 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"58-MgOn7tUYVEmfkJya8whRecpGTmQ\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"El producto fue eliminado con éxito.\",\"product\":\"5b00d6fa02a846105d867285\"}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9d42e69f-f0fc-4d7f-8b11-55b0c19a7747",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e75f64d6-74e1-4b7c-97fd-1c57668d5b62",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		}
@@ -465,6 +1691,22 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"id": "3f14f849-e2d2-4390-aa73-acfe43759377",
+			"key": "Token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1YWZmOTE1ZjU5Y2Y1MjJhZGEwYzZkOGEiLCJpYXQiOjE1MjY3NjE2NjYsImV4cCI6MTUyNzk3MTI2Nn0.hyTX-V7J_YFRb6q6BYWT_OxEc4oKMt2wUEEDZIaXaGCS3wnWanWiPzLCrfotrA5j_6wvXeZf1EPz-cz63XwO-A",
+			"type": "text",
+			"description": ""
+		},
+		{
+			"id": "288da2eb-534b-4ac9-ae90-c0ef9499ea03",
+			"key": "email",
+			"value": "imbittor4@gmail.com",
+			"type": "text",
+			"description": ""
 		}
 	]
 }
