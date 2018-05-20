@@ -5,14 +5,11 @@ const moment = require('moment');
 const config = require('../config');
 const randtoken = require('rand-token');
 
-function createToken(user) {
-    const email = user.email;
-    const password = user.password;
-    console.log(email, password);
+function createToken() {
     const payload = {
         sub: randtoken.uid(256),
         iat: moment().unix(),
-        exp: moment().add(60, 'seconds').unix()
+        exp: moment().add(60, 'seconds').unix(),
     };
     return jwt.sign(payload, config.SECRET_PRIVATE_KEY, { algorithm: 'RS256' });
 }
