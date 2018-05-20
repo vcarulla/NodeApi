@@ -69,7 +69,7 @@ function saveProduct(req, res) {
     product.category = req.body.category;
 
     product.save( (err, productStored) => {
-        if (err) res.status(500).send({ message: `Se produjo un error intentando guardar en la db.`, ERROR: `${err}` });
+        if (err) res.status(500).send({ message: `Se produjo un error al realizar la petición.`, ERROR: `${err}` });
         res.status(200).send({ message: `Producto fue salvado con éxito.`, product: `${productStored}` });
     });
 }
