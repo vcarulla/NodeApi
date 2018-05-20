@@ -1,36 +1,34 @@
 'use strict';
 
-const jwt = require('jwt-simple');
+const jwt = require('jsonwebtoken');
 const moment = require('moment');
 const config = require('../config');
+const randtoken = require('rand-token');
 
 function createToken(user) {
+    const email = user.email;
+    const password = user.password;
+    console.log(email, password);
     const payload = {
-        sub: user._id, //TODO inseguro
+        sub: randtoken.uid(256),
         iat: moment().unix(),
-        exp: moment().add(14, 'days').unix()
+        exp: moment().add(60, 'seconds').unix()
     };
-
-    return jwt.encode(payload, config.SECRET_TOKEN, 'HS512', {});
+    return jwt.sign(payload, config.SECRET_PRIVATE_KEY, { algorithm: 'RS256' });
 }
 
 function decodeToken(token) {
     const decode = new Promise( (resolve, reject) => {
-       try {
-           const payload = jwt.decode(token, config.SECRET_TOKEN, false, 'HS512');
-           if ( moment(payload.exp).unix() >= moment().unix() ) {
-               resolve({
+       jwt.verify(token, config.SECRET_PUBLIC_KEY, { algorithms: ['RS256'] }, (err, payload) => {
+           if ( err ) {
+               reject({
                    status: 401,
-                   message: `Token expirado.`
-               })
+                   message: `${err.message}`,
+                   err: `${err}`
+               });
            }
            resolve(payload.sub);
-       } catch (err) {
-           reject({
-               status: 500,
-               message: `Token incorrecto.`
-           });
-       }
+       });
     });
     return decode;
 }
