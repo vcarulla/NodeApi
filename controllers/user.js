@@ -13,26 +13,30 @@ const signUp = (req, res) => {
     user.avatar = user.gravatar();
 
     user.save( (err) => {
-        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición. ERROR: ${err}` });
+        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición.`, ERROR: `${err}` });
 
-        return res.status(200).send({ token: service.createToken(user) });
+        return res.status(200).send({ message: `Usuario generado con éxito!`, token: service.createToken(user) });
     });
 };
 
 function signIn(req, res) {
     User.findOne({ email: req.body.email }, (err, user) => {
-        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición. ERROR: ${err}` });
+        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición.`, ERROR: `${err}` });
         if (!user) return res.status(404).send({ message: `Usuario inexistente. ERROR: ${err}` });
         user.comparePassword(req.body.password, (err, match) => {
-            if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición2. ERROR: ${err}` });
+            if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición2.`, ERROR: `${err}` });
             if (match) {
-                res.status(200).send({ message: `Bienvenido ${user}!`, token: service.createToken(user) });
+                res.status(200).send({ message: `Bienvenido ${user.displayName}!`, token: service.createToken(user) });
             } else {
-             res.status(401).send({ message: `Datos Incorrectos. ERROR: ${err}` });
+             res.status(401).send({ message: `Datos Incorrectos.`, ERROR: `${err}` });
             }
         });
     }).select('avatar password displayName');
     // TODO Sino hacemos esto mongo no retorna el password, por q se puso select:false al crear el schema.
+}
+
+function signOut() {
+
 }
 
 module.exports = {

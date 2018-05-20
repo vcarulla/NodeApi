@@ -6,7 +6,7 @@ const config = require('./config');
 
 mongoose.connect(config.db, (err, res) => {
     if (err) {
-        return console.error(`Error en la conexión con mongodb.\nERROR: ${err}`);
+    return console.error(`Error en la conexión con mongodb.\nERROR: ${err}`) ;
     }
     console.info(`Conexión a mongodb establecida correctamente.`);
 

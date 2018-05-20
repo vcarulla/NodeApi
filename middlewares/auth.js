@@ -9,8 +9,7 @@ function isAuth(req, res, next) {
     const token = req.headers.authorization;
     services.decodeToken(token)
         .then( response => {
-            console.log('sdkljhj', response)
-            req.user = response;
+            // req.user = response;
             next();
         })
         .catch( response => {

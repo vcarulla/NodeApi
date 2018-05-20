@@ -6,8 +6,8 @@ function getProducts(req, res) {
     console.log(`GET '/api/product'`);
 
     Product.find({}, (err, products) => {
-        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición. ERROR: ${err}` });
-        if (!products) return res.status(404).send({ message: `No se encontraron coincidencias. ERROR: ${err}` });
+        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición.`, ERROR: `${err}` });
+        if (!products) return res.status(404).send({ message: `No se encontraron coincidencias.`, ERROR: `${err}` });
 
         res.status(200).send({ products });
     });
@@ -19,8 +19,8 @@ function getProduct(req, res) {
     let productId = req.params.productId;
 
     Product.findById(productId, (err, product) => {
-        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición. ERROR: ${err}` });
-        if (!product) return res.status(404).send({ message: `No se encontraron coincidencias. ERROR: ${err}` });
+        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición.`, ERROR: `${err}` });
+        if (!product) return res.status(404).send({ message: `No se encontraron coincidencias.`, ERROR: `${err}` });
 
         res.status(200).send({ product });
 
@@ -34,10 +34,10 @@ function updateProduct(req, res) {
     let body = req.body;
 
     Product.findByIdAndUpdate(productId, body, (err, productUpdated) => {
-        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición. ERROR: ${err}` });
-        if (!productUpdated) return res.status(404).send({ message: `No se encontraron coincidencias. ERROR: ${err}` });
+        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición.`, ERROR: `${err}` });
+        if (!productUpdated) return res.status(404).send({ message: `No se encontraron coincidencias.`, ERROR: `${err}` });
 
-        res.status(200).send({ message: `El id: ${productId} fue actualizado con éxito. ${productUpdated}`});
+        res.status(200).send({ message: `El producto fue actualizado con éxito.`, product: `${productUpdated}` });
     });
 }
 
@@ -47,12 +47,12 @@ function deleteProduct(req, res) {
     let productId =  req.params.productId;
 
     Product.findById(productId, (err, productDeleted) => {
-        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición. ERROR: ${err}` });
-        if (!productDeleted) return res.status(404).send({ message: `No se encontraron coincidencias.. ERROR: ${err}` });
+        if (err) return res.status(500).send({ message: `Se produjo un error al realizar la petición.`, ERROR: `${err}` });
+        if (!productDeleted) return res.status(404).send({ message: `No se encontraron coincidencias..`, ERROR: `${err}` });
 
         productDeleted.remove( err => {
-            if (err) return res.status(500).send({ message: `Se produjo un error intentando borrar en la db. ERROR: ${err}` });
-            res.status(200).send({ message: `El id: ${productId} fue eliminado con éxito`});
+            if (err) return res.status(500).send({ message: `Se produjo un error intentando borrar en la db.`, ERROR: `${err}` });
+            res.status(200).send({ message: `El producto fue eliminado con éxito.`, product: `${productId}` });
         });
     });
 }
@@ -69,8 +69,8 @@ function saveProduct(req, res) {
     product.category = req.body.category;
 
     product.save( (err, productStored) => {
-        if (err) res.status(500).send({ message: `Se produjo un error intentando guardar en la db. ERROR: ${err}` });
-        res.status(200).send({ product: productStored });
+        if (err) res.status(500).send({ message: `Se produjo un error intentando guardar en la db.`, ERROR: `${err}` });
+        res.status(200).send({ message: `Producto fue salvado con éxito.`, product: `${productStored}` });
     });
 }
 
